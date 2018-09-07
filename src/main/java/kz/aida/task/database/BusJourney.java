@@ -6,6 +6,7 @@ public class BusJourney {
     private int fromTime;
     private String toStation;
     private int toTime;
+    private int journeyTime;
     private int price;
     private String driver;
 
@@ -40,6 +41,7 @@ public class BusJourney {
 
     public void setFromTime(int fromTime) {
         this.fromTime = fromTime;
+        journeyTime = toTime - fromTime;
     }
 
     public String getToStation() {
@@ -56,6 +58,7 @@ public class BusJourney {
 
     public void setToTime(int toTime) {
         this.toTime = toTime;
+        journeyTime = toTime - fromTime;
     }
 
     public int getPrice() {
